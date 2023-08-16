@@ -99,7 +99,7 @@ while start:
             if stop:
                 break
         st.balloons()
-        autoplay_audio("sound2.mp3)
+        autoplay_audio("sound2.mp3")
     loop.empty()
     
 # COLLAGE:
