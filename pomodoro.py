@@ -110,6 +110,6 @@ rows = int(1 + pics_num//cols)
 grid = [st.columns(cols) for row in range(rows)]
 cols_list = [column for row in grid for column in row]
 for column, image in zip(cols_list, list(range(1,13))):
-    image = Image.open(str(image) + ".JPG")
+    image = Image.open(f"{image}.JPG")
     image_ = ImageOps.exif_transpose(image)
     column.image(image_)
