@@ -12,8 +12,6 @@ def pomodoro_study(start, stop):
     pom = st.empty()
     with pom:
         while total_study >= 0:
-            if key.is_pressed("esc"):
-                break
             if start:
                 mins = dt.timedelta(seconds = total_study)
                 st.metric("Time remaining: ", value=f"{str(mins):0>8}")
@@ -28,8 +26,6 @@ def pomodoro_rest(start, stop):
     pom = st.empty()
     with pom:
         while rest >= 0:
-            if key.is_pressed("esc"):
-                break
             if start:
                 mins = dt.timedelta(seconds=rest)
                 st.metric("Time remaining: ", value=f"{str(mins):0>8}")
@@ -52,15 +48,12 @@ st.caption("""\tThe Pomodoro Technique is a time management method designed to i
 \n\tThe technique involves breaking your work into focused intervals, usually 25 minutes in length, called \"Pomodoros.\" During each Pomodoro, you work on a single task without any interruptions or distractions. Once the 25 minutes are up, you take a short break of around 5 minutes to rest and recharge.""")
 
 st.caption("""    
-           To use the timer, press the \"Start Timer\" Button. Once pressed the study timer will start, the rest timer will only start once the study timer ends. Press \"Esc\" key
-           during Study Mode to immediately start the rest timer and press \"Esc\" key during Rest Mode to immediately start the study timer.
+           To use the timer, press the \"Start Timer\" Button. Once pressed the study timer will start, the rest timer will only start once the study timer ends.
            To stop the timer, press the \"Stop Timer\" button. This will terminate the program as a whole, in order to run it again, press the \"R\" key or the rerun on the menubar.
            """)
 
 # PROGRAM
 st.write("_"*50)
-if key.is_pressed("enter"):
-    start = True
 col3, col4 = st.columns(2)
 with col3:  
     start = st.button("Start Timer")
