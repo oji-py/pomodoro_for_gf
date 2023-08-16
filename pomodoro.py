@@ -34,12 +34,16 @@ def pomodoro_rest(start, stop):
             if stop:
                 exit()
       
-alarm = """
+alarm1 = """
             <audio autoplay>
               <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
             </audio>
             """
-
+alarm2 = """
+            <audio autoplay>
+              <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
+            </audio>
+            """
 # HEAD
 st.title("Pomodoro Technique")
 st.markdown("*Made by Ezra for my love!! <33*")
@@ -77,7 +81,7 @@ while start:
                
         st.balloons()
         sound = st.empty()
-        sound.markdown(alarm, unsafe_allow_html=True)  
+        sound.markdown(alarm1, unsafe_allow_html=True)  
         t.sleep(2) 
         sound.empty() 
     loop.empty()
@@ -92,7 +96,7 @@ while start:
                 
         st.balloons()
         sound = st.empty()
-        sound.markdown(alarm, unsafe_allow_html=True)  
+        sound.markdown(alarm2, unsafe_allow_html=True)  
         t.sleep(2) 
         sound.empty()
     loop.empty()
