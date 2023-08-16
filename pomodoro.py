@@ -41,7 +41,7 @@ alarm1 = """
             """
 alarm2 = """
             <audio autoplay>
-              <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
+              <source src="https://github.com/oji-py/pomodoro_for_gf/blob/main/sound2.mp3" type="audio/mp3">
             </audio>
             """
 # HEAD
