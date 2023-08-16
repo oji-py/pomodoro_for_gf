@@ -1,7 +1,7 @@
 import time as t
 import datetime as dt
 import streamlit as st
-import keyboard as key 
+import base64
 from PIL import Image, ImageOps
 
 st.set_page_config(page_title = "Pomodoro Technique", layout = "wide", initial_sidebar_state = "collapsed")
@@ -33,17 +33,25 @@ def pomodoro_rest(start, stop):
                 t.sleep(1)
             if stop:
                 exit()
-      
-alarm1 = """
-            <audio autoplay>
-              <source src="https://github.com/oji-py/pomodoro_for_gf/blob/main/sound1.mp3" type="audio/mp3">
-            </audio>
-            """
-alarm2 = """
-            <audio autoplay>
-              <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
-            </audio>
-            """
+                
+def autoplay_audio(file_path: str):
+    sound = st.empty()
+    with sound:
+        with open(file_path, "rb") as f:
+            data = f.read()
+            b64 = base64.b64encode(data).decode()
+            md = f"""
+                <audio autoplay="true">
+                <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+                </audio>
+                """
+            st.markdown(
+                md,
+                unsafe_allow_html=True,
+            )
+    t.sleep(4)
+    sound.empty()
+
 # HEAD
 st.title("Pomodoro Technique")
 st.markdown("*Made by Ezra for my love!! <33*")
@@ -80,10 +88,7 @@ while start:
                 break
                
         st.balloons()
-        sound = st.empty()
-        sound.markdown(alarm1, unsafe_allow_html=True)  
-        t.sleep(2) 
-        sound.empty() 
+        autoplay_audio("sound1.mp3")
     loop.empty()
     with col2:
         loop = st.empty()
@@ -93,12 +98,8 @@ while start:
                 st.success("Study Time!")
             if stop:
                 break
-                
         st.balloons()
-        sound = st.empty()
-        sound.markdown(alarm2, unsafe_allow_html=True)  
-        t.sleep(2) 
-        sound.empty()
+        autoplay_audio("sound2.mp3)
     loop.empty()
     
 # COLLAGE:
