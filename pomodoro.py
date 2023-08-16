@@ -35,7 +35,7 @@ def pomodoro_rest(start, stop):
                 exit()
       
 alarm1 = """
-            <audio controls autoplay>
+            <audio autoplay>
               <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
             </audio>
             """
