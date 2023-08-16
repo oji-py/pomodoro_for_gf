@@ -61,7 +61,7 @@ st.caption("""\tThe Pomodoro Technique is a time management method designed to i
 
 st.caption("""    
            To use the timer, press the \"Start Timer\" Button. Once pressed the study timer will start, the rest timer will only start once the study timer ends.
-           To stop the timer, press the \"Stop Timer\" button. This will terminate the program as a whole, in order to run it again, press the \"R\" key or the rerun on the menubar.
+           To stop the timer, press the \"Stop Timer\" button. This will terminate the program as a whole, in order to run it again, press the \"R\" key or the rerun on the menu bar.
            """)
 
 # PROGRAM
