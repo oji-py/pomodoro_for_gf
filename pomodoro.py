@@ -8,7 +8,7 @@ st.set_page_config(page_title = "Pomodoro Technique", layout = "wide", initial_s
 
 
 def pomodoro_study(start, stop):
-    total_study = 25 * 60
+    total_study = 10
     pom = st.empty()
     with pom:
         while total_study >= 0:
@@ -22,7 +22,7 @@ def pomodoro_study(start, stop):
 
     
 def pomodoro_rest(start, stop):
-    rest = 5 * 60
+    rest = 5 
     pom = st.empty()
     with pom:
         while rest >= 0:
@@ -88,7 +88,7 @@ while start:
                 break
                
         st.balloons()
-        autoplay_audio("sound1.mp3")
+        autoplay_audio("New_Project.mp3")
     loop.empty()
     with col2:
         loop = st.empty()
@@ -99,7 +99,7 @@ while start:
             if stop:
                 break
         st.balloons()
-        autoplay_audio("sound2.mp3")
+        autoplay_audio("New_Project2.mp3")
     loop.empty()
     
 # COLLAGE:
