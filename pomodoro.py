@@ -8,7 +8,7 @@ st.set_page_config(page_title = "Pomodoro Technique", layout = "wide", initial_s
 
 
 def pomodoro_study(start, stop):
-    total_study = 10
+    total_study = 25 * 60
     pom = st.empty()
     with pom:
         while total_study >= 0:
@@ -21,7 +21,7 @@ def pomodoro_study(start, stop):
                 exit()
     
 def pomodoro_rest(start, stop):
-    rest = 5
+    rest = 5 * 60
     pom = st.empty()
     with pom:
         while rest >= 0:
