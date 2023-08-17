@@ -19,7 +19,6 @@ def pomodoro_study(start, stop):
                 t.sleep(1)
             if stop:
                 exit()
-
     
 def pomodoro_rest(start, stop):
     rest = 5 
@@ -49,7 +48,7 @@ def autoplay_audio(file_path: str):
                 md,
                 unsafe_allow_html=True,
             )
-    t.sleep(4)
+    t.sleep(13)
     sound.empty()
 
 # HEAD
