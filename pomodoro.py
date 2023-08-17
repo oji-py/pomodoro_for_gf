@@ -87,7 +87,7 @@ while start:
                 break
                
         st.balloons()
-        autoplay_audio("New_Project.mp3")
+        autoplay_audio("New_Project2.mp3")
     loop.empty()
     with col2:
         loop = st.empty()
@@ -98,7 +98,7 @@ while start:
             if stop:
                 break
         st.balloons()
-        autoplay_audio("New_Project2.mp3")
+        autoplay_audio("New_Project.mp3")
     loop.empty()
     
 # COLLAGE:
