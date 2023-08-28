@@ -1,2 +1,2 @@
-streamlit==0.52
+pip install streamlit==0.51
 Pillow==9.4.0
