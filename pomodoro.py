@@ -76,30 +76,17 @@ with col1:
     st.header("Study Timer")
 with col2:
     st.header("Rest Timer")
-while start:
+if start:
     with col1:
-        loop = st.empty()
-        with loop:
-            if start:
-                pomodoro_study(start, stop)
-                st.success("Rest Time!")
-            if stop:
-                break
-               
+        pomodoro_study(start, stop)
+        st.success("Rest Time!")
         st.balloons()
         autoplay_audio("New_Project2.mp3")
-    loop.empty()
     with col2:
-        loop = st.empty()
-        with loop:
-            if start:
-                pomodoro_rest(start, stop)
-                st.success("Study Time!")
-            if stop:
-                break
+        pomodoro_rest(start, stop)
+        st.success("Study Time!")
         st.balloons()
         autoplay_audio("New_Project.mp3")
-    loop.empty()
     
 # COLLAGE:
 st.markdown("__"*50)
